@@ -29,15 +29,13 @@ spring:
       max-request-size: 3MB
   jackson:
     default-property-inclusion: non_null   # não envia campos nulos no JSON
-
 gerenciacao:
   plataforma:
-    admins: ${PLATAFORMA_ADMINS:}   # e-mails (separados por vírgula) que gerenciam os anúncios de Parcerias
+    admins: ${PLATAFORMA_ADMINS:}
   jwt:
-    segredo: ${JWT_SEGREDO}        # sem valor padrão: a API não sobe sem ele
+    segredo: ${JWT_SEGREDO}
     expiracao-horas: 12
-
-    cloudinary:
-  cloud-name: ${CLOUDINARY_CLOUD_NAME:}
-  api-key: ${CLOUDINARY_API_KEY:}
-  api-secret: ${CLOUDINARY_API_SECRET:}
+  cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUD_NAME:}
+    api-key: ${CLOUDINARY_API_KEY:}
+    api-secret: ${CLOUDINARY_API_SECRET:}
